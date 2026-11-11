@@ -11,10 +11,16 @@ let package = Package(
         .library(
             name: "PeekuPresenceEngine",
             targets: ["PeekuPresenceEngine"]
-        )
+        ),
+        .executable(name: "pulse-demo", targets: ["PulseDemo"])
     ],
     targets: [
         .target(name: "PeekuPresenceEngine"),
+        .executableTarget(
+            name: "PulseDemo",
+            dependencies: ["PeekuPresenceEngine"],
+            path: "Examples/PulseDemo"
+        ),
         .testTarget(
             name: "PeekuPresenceEngineTests",
             dependencies: ["PeekuPresenceEngine"]

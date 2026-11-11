@@ -20,6 +20,28 @@ The failed metadata-face attempt averaged 28.9% over 19 samples. The pulsed
 video build averaged 7.0% over 19 samples across 3+ minutes, with short camera
 spikes and 1-2% between pulses.
 
+## Run the example
+
+With Swift 5.10 or later on macOS, run these commands in Terminal:
+
+```sh
+git clone https://github.com/iamitp/peeku-presence-engine.git
+cd peeku-presence-engine
+swift run pulse-demo
+```
+
+The [example](Examples/PulseDemo/main.swift) passes three sample observations to the scheduler. It runs without camera access. With Peeku’s default timings it prints:
+
+```text
+At the desk: next camera check in 10 s
+No face in the sample: next camera check in 5 s
+Eye rest due: next camera check in 2 s
+```
+
+If you run the example on your Mac, [tell us whether it worked](https://github.com/iamitp/peeku-presence-engine/issues/new?title=Running%20the%20pulse%20example). Your Swift version and the output are enough.
+
+To try the Mac app, visit [Peeku on GitHub](https://github.com/iamitp/peeku-releases).
+
 ## Install
 
 ```swift
